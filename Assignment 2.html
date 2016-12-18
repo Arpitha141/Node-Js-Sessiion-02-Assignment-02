@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Multiplication using Closure.  </title>
+</head>
+<body>
+
+<h1> Multiplication using Closure. </h1>
+
+<p>  Outer function with a parameter:  myFunc(num) </p> 
+
+<p>Inner function which also has a parameter : inner(num1) </p>
+
+<p> The number passed for outer function is: <b> 10 </b> and number passed for inner function is: <b> 5 </b></p>
+
+
+<script type="text/javascript">
+	function myFunc(num){
+
+		return function inner(num1){
+
+			return num * num1; 
+		}
+
+	}
+
+ var result = myFunc(10);
+ console.log(result(10));
+ alert("The multification using consure : " );
+alert('multiplication of x and y is '+result(5)); 
+
+ document.write("<br> The result is " + result(5));
+</script>
+
+</body>
+</html>
